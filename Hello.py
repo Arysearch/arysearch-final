@@ -142,7 +142,7 @@ if st.button("Submit") :
   st.header(':orange[HASIL PERHITUNGAN]', divider='orange')
   col11, col12 = st.columns(2)
   with col11:
-    st.markdown('PREDIKSI ANN')
+    st.latex(r"\text{HASIL PREDIKSI ANN}")
     skalaANN = scalerANN.transform(input)
     prediksiANN = ANNmodel.predict(skalaANN)
     print("PROBABILITAS ANN :" , prediksiANN)
@@ -150,20 +150,20 @@ if st.button("Submit") :
     print("PREDIKSI ANN ", label_encoder.inverse_transform([hasilANN]))
     if hasilANN == 0 :
         print("NON DIABETES")
-        st.markdown(':grey-background[:green[NON DIABETES]]')
+        st.subheader("`NON DIABETES`")
     else :
         print("DIABETES")
-        st.markdown(':grey-background[:green[DIABETES]')
+        st.subheader("`DIABETES`")
 
   with col12:
-    st.markdown('PREDIKSI KNN')
+    st.latex(r"\text{HASIL PREDIKSI KNN}")
     skalaKNN = scalerKNN.transform(input)
     hasilKNN = knn_model.predict(skalaKNN)
 
     print("Predicted Class:", hasilKNN)
     if hasilKNN == 0 :
         print("NON DIABETES")
-        st.markdown(':grey-background[:green[NON DIABETES]]')
+        st.subheader("`NON DIABETES`")
     else :
         print("DIABETES")
-        st.markdown(':grey-background[:green[DIABETES]')
+        st.subheader("`DIABETES`")
