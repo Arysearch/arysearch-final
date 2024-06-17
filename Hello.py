@@ -132,8 +132,8 @@ scalerKNN = StandardScaler()
 X_scaled = scalerKNN.fit_transform(X)
 # Simpan objek StandardScaler
 
-ANNmodel = keras.models.load_model('ANN 1000.h5')
-knn_model = joblib.load('200KNN.pkl')
+ANNmodel = keras.models.load_model('ANN_Model.h5')
+knn_model = joblib.load('KNN_Model.pkl')
 
 input = [[c,a,d,f,g,h,e,b,i,j,k]]
 print("Prediction Input :", input)
