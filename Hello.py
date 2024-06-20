@@ -10,9 +10,9 @@ st.header(':orange[DIABETES DETECTOR]')
 
 col1, col2 = st.columns(2)
 with col1:
-  a = st.number_input("UMUR : ",min_value=0, value=0, placeholder="Type a number...")
+  a = st.number_input("UMUR : ",min_value=0, value=0)
 with col2:
-  b = st.number_input("KADAR GULA DARAH (MG/DL) : ",min_value=0, value=0, placeholder="Type a number...")
+  b = st.number_input("KADAR GULA DARAH (MG/DL) : ",min_value=0, value=0)
 
 col3, col4, col5 = st.columns(3)
 with col3:
