@@ -6,7 +6,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.header(':orange[DIABETES DETECTOR]', divider='orange')
+st.header(':orange[DIABETES DETECTOR]')
 
 col1, col2 = st.columns(2)
 with col1:
