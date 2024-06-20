@@ -16,11 +16,11 @@ with col2:
 
 col3, col4, col5 = st.columns(3)
 with col3:
-  pil1 = st.selectbox("JENIS KELAMIN : ",("LAKI LAKI", "PEREMPUAN"),index=None)
+  pil1 = st.selectbox("JENIS KELAMIN : ",("LAKI LAKI", "PEREMPUAN"),index=0)
 with col4:
-  pil2 = st.selectbox("PEROKOK : ",("YA", "TIDAK"),index=None)
+  pil2 = st.selectbox("PEROKOK : ",("YA", "TIDAK"),index=0)
 with col5:  
-  pil3 = st.selectbox("RIWAYAT DIABETES KELUARGA : ",("ADA", "TIDAK ADA"),index=None)
+  pil3 = st.selectbox("RIWAYAT DIABETES KELUARGA : ",("ADA", "TIDAK ADA"),index=0)
 c = 0 if pil1 == 'PEREMPUAN' else 1
 d = 0 if pil2 == 'TIDAK' else 1
 e = 0 if pil3 == 'TIDAK ADA' else 1
@@ -139,7 +139,7 @@ input = [[c,a,d,f,g,h,e,b,i,j,k]]
 print("Prediction Input :", input)
 
 if st.button("Submit") :
-  st.header(':orange[HASIL PERHITUNGAN]', divider='orange')
+  st.header(':orange[HASIL PERHITUNGAN]')
   col11, col12 = st.columns(2)
   with col11:
     st.latex(r"\text{HASIL PREDIKSI ANN}")
