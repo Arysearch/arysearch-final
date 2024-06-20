@@ -16,11 +16,11 @@ with col2:
 
 col3, col4, col5 = st.columns(3)
 with col3:
-  pil1 = st.selectbox("JENIS KELAMIN : ",("LAKI LAKI", "PEREMPUAN"),index=None,placeholder="Pilih Jenis Kelamin")
+  pil1 = st.selectbox("JENIS KELAMIN : ",("LAKI LAKI", "PEREMPUAN"),index=None)
 with col4:
-  pil2 = st.selectbox("PEROKOK : ",("YA", "TIDAK"),index=None,placeholder="Pilih Jenis Perokok")
+  pil2 = st.selectbox("PEROKOK : ",("YA", "TIDAK"),index=None)
 with col5:  
-  pil3 = st.selectbox("RIWAYAT DIABETES KELUARGA : ",("ADA", "TIDAK ADA"),index=None,placeholder="Pilih Riwayat Diabetes Keluarga")
+  pil3 = st.selectbox("RIWAYAT DIABETES KELUARGA : ",("ADA", "TIDAK ADA"),index=None)
 c = 0 if pil1 == 'PEREMPUAN' else 1
 d = 0 if pil2 == 'TIDAK' else 1
 e = 0 if pil3 == 'TIDAK ADA' else 1
