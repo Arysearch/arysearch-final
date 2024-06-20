@@ -111,7 +111,7 @@ from tensorflow import keras
 from sklearn.neighbors import KNeighborsClassifier
 
 #Load Data and review content
-dataset = pd.read_csv("200Data.csv")
+dataset = pd.read_csv("S1000Data.csv")
 
 from sklearn import preprocessing
 label_encoder = preprocessing.LabelEncoder()
@@ -133,7 +133,7 @@ X_scaled = scalerKNN.fit_transform(X)
 # Simpan objek StandardScaler
 
 ANNmodel = keras.models.load_model('ANN_Model.h5')
-knn_model = joblib.load('KNN_Model.pkl')
+knn_model = joblib.load('KNN_model.pkl')
 
 input = [[c,a,d,f,g,h,e,b,i,j,k]]
 print("Prediction Input :", input)
