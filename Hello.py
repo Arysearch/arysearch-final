@@ -8,11 +8,7 @@ st.markdown("""
 
 st.header(':orange[DIABETES DETECTOR]')
 
-col1, col2 = st.columns(2)
-with col1:
-  a = st.number_input("UMUR : ",min_value=0, value=0)
-with col2:
-  b = st.number_input("KADAR GULA DARAH (MG/DL) : ",min_value=0, value=0)
+a = st.number_input("UMUR : ",min_value=0, value=0)
 
 col3, col4, col5 = st.columns(3)
 with col3:
@@ -111,7 +107,7 @@ from tensorflow import keras
 from sklearn.neighbors import KNeighborsClassifier
 
 #Load Data and review content
-dataset = pd.read_csv("S1000Data.csv")
+dataset = pd.read_csv("SKRIPSI 1000Data.csv")
 
 from sklearn import preprocessing
 label_encoder = preprocessing.LabelEncoder()
@@ -119,8 +115,8 @@ dataset['Tipe'] = label_encoder.fit_transform(
                                 dataset['Tipe'])#Convert input to numpy array
 np_data = dataset.to_numpy()
 
-X_data = np_data[:,0:11]
-Y_data=np_data[:,11]
+X_data = np_data[:,0:10]
+Y_data=np_data[:,10]
 X = dataset.drop('Tipe', axis=1)
 y = dataset['Tipe']
 
@@ -132,10 +128,10 @@ scalerKNN = StandardScaler()
 X_scaled = scalerKNN.fit_transform(X)
 # Simpan objek StandardScaler
 
-ANNmodel = keras.models.load_model('ANN_Model.h5')
-knn_model = joblib.load('KNN_model.pkl')
+ANNmodel = keras.models.load_model('ANN.h5')
+knn_model = joblib.load('KNN.pkl')
 
-input = [[c,a,d,f,g,h,e,b,i,j,k]]
+input = [[c,a,d,f,g,h,e,i,j,k]]
 print("Prediction Input :", input)
 
 if st.button("Submit") :
